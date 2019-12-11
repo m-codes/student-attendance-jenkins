@@ -4,6 +4,7 @@ public class studentTest {
     @org.junit.Test(expected = IllegalArgumentException.class)
     public void belowZero() throws Exception {
         student std = new student();
+
         std.getAttendanceGrade(-1);
     }
 

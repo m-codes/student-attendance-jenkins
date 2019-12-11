@@ -1,5 +1,4 @@
 public class student {
-
     public enum AttendanceGrade {ABSENT, VERY_POOR, AVERAGE, GOOD, VERY_GOOD};
 
     public AttendanceGrade getAttendanceGrade(int attendance) {

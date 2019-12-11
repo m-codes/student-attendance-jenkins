@@ -3,12 +3,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                 bat 'mvn clean -f "/home/martin/Documents/gitHubRepos/student-attendance-jenkins"'
+                 bat 'mvn compile -f "/home/martin/Documents/gitHubRepos/student-attendance-jenkins"'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                bat 'mvn test -f "/home/martin/Documents/gitHubRepos/student-attendance-jenkins"'
             }
         }
     }
