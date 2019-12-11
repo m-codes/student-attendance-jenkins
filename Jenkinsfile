@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                 sh 'mvn clean -f "/home/martin/Documents/gitHubRepos/student-attendance-jenkins"'
                  sh 'mvn compile -f "/home/martin/Documents/gitHubRepos/student-attendance-jenkins"'
             }
         }
