@@ -1,7 +1,5 @@
-
-
-node {
-
+pipeline {
+    agent any
     stages {
         stage('Build') {
             steps {
@@ -11,11 +9,6 @@ node {
         stage('Test') {
             steps {
                 echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
             }
         }
     }
