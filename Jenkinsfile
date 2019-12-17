@@ -3,19 +3,19 @@ pipeline {
     stages {
         stage('Fetch') {
             steps {
-                sh 'ls'
                 sh 'git clone "https://github.com/m-codes/student-attendance-jenkins.git"'
+                sh '/var/lib/jenkins/student-attendance'
             }
         }
         stage('Build') {
             steps {
-                 sh 'mvn clean -f "/home/martin/Documents/gitHubRepos/student-attendance-jenkins"'
-                 sh 'mvn compile -f "/home/martin/Documents/gitHubRepos/student-attendance-jenkins"'
+                 sh 'mvn clean -f "student-attendance-jenkins"'
+                 sh 'mvn compile -f "student-attendance-jenkins"'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test -f "/home/martin/Documents/gitHubRepos/student-attendance-jenkins"'
+                sh 'mvn test -f "student-attendance-jenkins"'
             }
         }
         stage('Cleanup') {
