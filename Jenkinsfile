@@ -4,7 +4,6 @@ pipeline {
         stage('Fetch') {
             steps {
                 sh 'git clone "https://github.com/m-codes/student-attendance-jenkins.git"'
-                sh '/var/lib/jenkins/workspace/student-attendance'
             }
         }
         stage('Build') {
