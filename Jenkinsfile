@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Fetch') {
             steps {
-                git 'https://github.com/m-codes/student-attendance-jenkins.git'
+                sh 'git clone "https://github.com/m-codes/student-attendance-jenkins.git"'
             }
         }
         stage('Build') {
